@@ -1,0 +1,23 @@
+{
+    "name": "Nota Paraná AutoClick",
+    "version": "4.0",
+    "description": "Clica automáticamente no botão \"Doar Nota\" assim que o campo \"Chave de Acesso\" for preenchido.",
+    "manifest_version": 3,
+    "author": "Erick Ruh Cardozo (W1SD00M)",
+    "permissions": [
+        "tabs",
+        "scripting",
+        "webNavigation",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Nota Paraná AutoClick"
+    }
+}
