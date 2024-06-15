@@ -18,7 +18,18 @@
       </div>
 
       <input id="accessKeyField" class="form-control" type="number" placeholder="Chave de Acesso">
+	  
+	  <div class="input-group mt-2">
+	  	<input id="donationDateField" class="form-control form-control-sm" type="date" />
+	  	<button id="countDonationsBtn" class="btn btn-sm btn-primary" type="button">Contar Doações</button>
+	  </div>
+	  
+	  <div class="mt-2 d-flex align-items-center justify-content-center">
+	  	<div id="cuponCountSpinner" class="spinner-border text-primary d-none" role="status"></div>
+		<p id="donatedCuponParagraph" class="lead d-none mb-0"><span id="donatedCuponCount">0</span> Notas Doadas!</p>
+	  </div>
     </form>
+	
     <script src="./script.js"></script>
   </body>
 </html>
