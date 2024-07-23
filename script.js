@@ -67,6 +67,6 @@ addEventListener('submit', function() {
   chrome.tabs.reload();
 });
 
-let dateStr = (new Date()).toISOString();
+let dateStr = (new Date(Date.now())).toISOString();
 dateStr = dateStr.substring(0, dateStr.indexOf('T'));
 donationDateField.value = dateStr;
