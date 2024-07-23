@@ -48,7 +48,7 @@ async function countDonatedCupons() {
 	response = await response.text();
 	const lines = response.split('\n');
 	const donatedCupons = lines.filter(l => l.includes(brFormattedDate)).length;
-	donatedCuponCount.innerText = donatedCupons;
+	donatedCuponCount.innerText = donatedCupons.toLocaleString();
 	cuponCountSpinner.classList.add('d-none');
 	donatedCuponParagraph.classList.remove('d-none');
 }
