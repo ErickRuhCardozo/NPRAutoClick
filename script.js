@@ -38,10 +38,9 @@ function disableAutoClick() {
 async function countDonatedCupons() {
 	donatedCuponParagraph.classList.add('d-none');
 	const selectedDate = donationDateField.valueAsDate;
-	const queryPeriod = selectedDate.toLocaleString('en-US', { month: '2-digit', year: 'numeric' });
 	selectedDate.setDate(selectedDate.getDate() + 1); // Fixing the 'day-off' problem. Gosh I Hate JS 😡
+	const queryPeriod = selectedDate.toLocaleString('en-US', { month: '2-digit', year: 'numeric' });
 	const brFormattedDate = selectedDate.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
-	console.log(brFormattedDate);
 	const url = `https://notaparana.pr.gov.br/nfprweb/RelatorioDocFiscalDoado?periodo=${queryPeriod}`;
 	cuponCountSpinner.classList.remove('d-none');
 	let response = await fetch(url);
